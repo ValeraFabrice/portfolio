@@ -1,0 +1,12 @@
+/*
+Theme Name: Mon Thème
+Template: twentyseventeen
+Author: Valéra Fabrice
+Author URI: www.bbr.com
+Description: Mon premier thème WordPress !
+*/
+
+@import url("../twentyseventeen/style.css");
+
+body.has-header-image .site-title, body.has-header-video .site-title, body.has-header-image .site-title a, body.has-header-video .site-title a {
+    color: green;}

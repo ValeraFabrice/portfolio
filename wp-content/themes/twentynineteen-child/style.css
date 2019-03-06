@@ -1,0 +1,25 @@
+/*
+Theme Name:   Twenty Nineteen Child
+Theme URI:    https://wp.boxydev.com/theme/twentynineteen-child
+Description:  Twenty Nineteen Child Theme
+Author:       Fabrice Raobera
+Author URI:   https://fabriceraobera.fr
+Template:     twentynineteen
+Version:      1.0.0
+License:      GNU General Public License v2 or later
+License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+.site-info {
+    text-align: center;
+}
+
+/* Supprimer le texte de la home */
+.home .entry-header {
+    display: none;
+}
+/* Régler le souci avec elementor */
+.elementor {
+    max-width: 100% !important;
+}
+
