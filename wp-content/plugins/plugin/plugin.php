@@ -12,15 +12,16 @@ License: GPL2
 Class Plugin{
 
     public function __construct(){
-        // add filter prend en 1er argument le type de variable sur lequel j'applique mon filtre, en 2eme argument je mets le filtre en question et enfin en 3eme argument le niveau d'importance (ordre) dans lequel le filtre sera exécuté
-        add_filter('wp_title', array($this, 'modify_page_title'), 20);
+
+        include_once plugin_dir_path(__FILE__).'/page_title.php';
+        new Page_Title();
+        include_once plugin_dir_path(__FILE__).'/newsletter.php';
+        new Newsletter();
+        // Des que le plugin est activé, la fonction static install() est exécute. Elle va donc créer la table wp_newsletter_email pour stocker les mails des abonnésà à la newsletter dans la base de données wordpress
+        
+        register_activation_hook(__FILE__,array('Newsletter', 'install'));
+        register_uninstall_hook(__FILE__,array('Newsletter', 'uninstall'));
     }
-
-    public function modify_page_title($title){
-
-        return $title.' - powered by my Plugin';
-    }
-
 
 }
 

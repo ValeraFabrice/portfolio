@@ -10,6 +10,7 @@ function display_hello()
 // argument 1 (widget_init) qui suit les règles de création de l'arg 2
 // la fonction add_sidebar
 // On crée donc ci-dessous un widget de type sidebar ! précisez au moins id et nom
+
 add_action('widgets_init', 'add_sidebar');
 function add_sidebar()
 {
